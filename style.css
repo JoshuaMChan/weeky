@@ -35,7 +35,13 @@
   --block-red-text: #c5221f;
   --starbucks-green: #00704a;
   --starbucks-green-dark: #005238;
+  --sunrise-color: #e86a2a;
+  --salad-green: #6aab55;
   --point-color: #1a73e8;
+
+  --event-font-size: 0.6875rem;
+  --event-font-weight: 600;
+  --event-label-height: 0.75rem;
 }
 
 body {
@@ -218,22 +224,24 @@ html {
   border-radius: 4px;
   border: 1px solid transparent;
   overflow: hidden;
-  font-size: 0.6875rem;
+  font-size: var(--event-font-size);
   line-height: 1.25;
 }
 
 .event--block .event-title {
   display: block;
-  font-weight: 500;
+  font-weight: var(--event-font-weight);
+  font-size: var(--event-font-size);
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
-.event--block .event-time {
+.event--block:not(.t-starbucks) .event-time {
   display: block;
-  font-size: 0.625rem;
-  opacity: 0.85;
+  font-size: var(--event-font-size);
+  font-weight: 500;
+  opacity: 0.9;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -291,7 +299,42 @@ html {
 }
 
 .event--block.t-starbucks .event-time {
+  font-size: 0.625rem;
   color: rgba(255, 255, 255, 0.88);
+}
+
+.event--point.t-wakeup {
+  color: var(--sunrise-color);
+}
+
+.event--point.t-wakeup::before {
+  background: var(--sunrise-color);
+}
+
+.event--point.t-wakeup::after {
+  background: var(--sunrise-color);
+  box-shadow: 0 0 0 1px var(--sunrise-color);
+}
+
+.event--point.t-wakeup .event-label {
+  color: var(--sunrise-color);
+}
+
+.event--point.t-salad {
+  color: var(--salad-green);
+}
+
+.event--point.t-salad::before {
+  background: var(--salad-green);
+}
+
+.event--point.t-salad::after {
+  background: var(--salad-green);
+  box-shadow: 0 0 0 1px var(--salad-green);
+}
+
+.event--point.t-salad .event-label {
+  color: var(--salad-green);
 }
 
 .event--point {
@@ -325,11 +368,13 @@ html {
 
 .event--point .event-label {
   position: absolute;
-  top: -1.35rem;
+  top: calc(-1 * var(--event-label-height) - 5px);
   left: 4px;
   right: 4px;
-  font-size: 0.625rem;
-  font-weight: 500;
+  height: var(--event-label-height);
+  line-height: var(--event-label-height);
+  font-size: var(--event-font-size);
+  font-weight: var(--event-font-weight);
   color: var(--point-color);
   white-space: nowrap;
   overflow: hidden;
@@ -347,8 +392,7 @@ html {
     padding: 0.375rem 0.5rem;
   }
 
-  .event--block {
-    font-size: 0.625rem;
+  .event--block:not(.t-starbucks) {
     padding: 1px 4px 2px;
   }
 }
