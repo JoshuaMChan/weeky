@@ -39,6 +39,8 @@
   --salad-green: #6aab55;
   --japan-red: #bc002d;
   --japan-red-dark: #9a0024;
+  --earth-brown: #8b7355;
+  --earth-brown-dark: #6b5744;
   --movie-gray-bg: #5c5c5c;
   --movie-gray-text: #f0f0f0;
   --point-color: #1a73e8;
@@ -285,6 +287,16 @@ html {
   background: var(--block-red);
   color: var(--block-red-text);
   border-color: #f5c6c4;
+}
+
+.event--block.t-earth {
+  background: var(--earth-brown);
+  color: #fff;
+  border-color: var(--earth-brown-dark);
+}
+
+.event--block.t-earth .event-time {
+  color: rgba(255, 255, 255, 0.88);
 }
 
 .event--block.t-japan {
