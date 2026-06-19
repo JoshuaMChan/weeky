@@ -1,118 +1,212 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-<head>
-    <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weekly Routine</title>
-    <link rel="stylesheet" href="style.css"/>
-</head>
-<body>
-<main class="page">
-    <header class="page-header">
-        <h1>Weekly Routine</h1>
-        <p class="subtitle">📅</p>
-    </header>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!--
+      ═══════════════════════════════════════════════════════════
+      编辑指南
 
-    <div class="table-wrap">
-        <table class="schedule">
-            <thead>
-            <tr>
-                <th class="col-time"></th>
-                <th>Sun☀️</th>
-                <th>Mon🌙</th>
-                <th>Tue🔥</th>
-                <th>Wed💧</th>
-                <th>Thu🪵</th>
-                <th>Fri🥇</th>
-                <th>Sat🌍</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr>
-                <td class="col-time">7:00</td>
-                <td colspan="7" class="full-row">🌅</td>
-            </tr>
-            <tr>
-                <td class="col-time">8:30</td>
-                <td colspan="7" class="full-row">星巴克</td>
-            </tr>
-            <tr>
-                <td class="col-time">11:00</td>
-                <td></td>
-                <td>G</td>
-                <td></td>
-                <td>G</td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td class="col-time">12:00</td>
-                <td>M</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td>M</td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td class="col-time">13:00</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td>课</td>
-                <td></td>
-            </tr>
-            <tr>
-                <td class="col-time">13:30</td>
-                <td>石岩</td>
-                <td>锻炼</td>
-                <td></td>
-                <td>锻炼</td>
-                <td>石岩</td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td class="col-time">14:30</td>
-                <td></td>
-                <td>科技园</td>
-                <td></td>
-                <td>科技园</td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td class="col-time">18:00</td>
-                <td>外轻</td>
-                <td>M</td>
-                <td></td>
-                <td>M</td>
-                <td>外轻</td>
-                <td>K</td>
-                <td></td>
-            </tr>
-            <tr>
-                <td class="col-time"></td>
-                <td></td>
-                <td></td>
-                <td>课</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td class="col-time">21:00</td>
-                <td colspan="7" class="full-row">Movie Time</td>
-            </tr>
-            </tbody>
-        </table>
-    </div>
-</main>
-</body>
+      时间：距午夜分钟数（7:00 → 420，8:30 → 510）
+
+      线段时间：class="event event--block"  + --start / --end
+      时间点：  class="event event--point"  + --start
+      并行：    --lane: 0 和 --lane: 1，--lanes: 2
+      颜色：    t-blue | t-green | t-starbucks | t-purple | t-red
+      ═══════════════════════════════════════════════════════════
+    -->
+
+    <main class="page">
+      <div class="calendar">
+        <div class="calendar-scroll">
+          <div class="calendar-inner">
+            <div class="week-header">
+              <div class="corner"></div>
+              <div class="day-head">Sun ☀️</div>
+              <div class="day-head">Mon 🌙</div>
+              <div class="day-head">Tue 🔥</div>
+              <div class="day-head">Wed 💧</div>
+              <div class="day-head">Thu 🪵</div>
+              <div class="day-head">Fri 🥇</div>
+              <div class="day-head">Sat 🌍</div>
+            </div>
+
+            <div class="week-body">
+              <div class="time-gutter">
+                <div class="hour-label"><span>7 AM</span></div>
+                <div class="hour-label"><span>8 AM</span></div>
+                <div class="hour-label"><span>9 AM</span></div>
+                <div class="hour-label"><span>10 AM</span></div>
+                <div class="hour-label"><span>11 AM</span></div>
+                <div class="hour-label"><span>12 PM</span></div>
+                <div class="hour-label"><span>1 PM</span></div>
+                <div class="hour-label"><span>2 PM</span></div>
+                <div class="hour-label"><span>3 PM</span></div>
+                <div class="hour-label"><span>4 PM</span></div>
+                <div class="hour-label"><span>5 PM</span></div>
+                <div class="hour-label"><span>6 PM</span></div>
+                <div class="hour-label"><span>7 PM</span></div>
+                <div class="hour-label"><span>8 PM</span></div>
+                <div class="hour-label"><span>9 PM</span></div>
+                <div class="hour-label"><span>10 PM</span></div>
+                <div class="hour-label"><span>11 PM</span></div>
+              </div>
+
+              <!-- ═══ SUN ═══ -->
+              <div class="day-column">
+                <div class="event event--point" style="--start: 420">
+                  <span class="event-label">Wake Up 🌅</span>
+                </div>
+                <div class="event event--block t-red" style="--start: 1260; --end: 1380">
+                  <span class="event-title">Movie Time</span>
+                  <span class="event-time">21:00 – 23:00</span>
+                </div>
+              </div>
+
+              <!-- ═══ MON ═══ -->
+              <div class="day-column">
+                <div class="event event--point" style="--start: 420">
+                  <span class="event-label">Wake Up 🌅</span>
+                </div>
+                <div class="event event--block t-starbucks" style="--start: 540; --end: 780">
+                  <img class="event-logo" src="assets/starbucks-wordmark.png" alt="Starbucks" />
+                  <span class="event-time">9:00 – 13:00</span>
+                </div>
+                <div class="event event--block t-green" style="--start: 810; --end: 870">
+                  <span class="event-title">石岩</span>
+                  <span class="event-time">13:30 – 14:30</span>
+                </div>
+                <div class="event event--block t-purple" style="--start: 1080; --end: 1140">
+                  <span class="event-title">外轻</span>
+                  <span class="event-time">18:00 – 19:00</span>
+                </div>
+                <div class="event event--block t-red" style="--start: 1260; --end: 1380">
+                  <span class="event-title">Movie Time</span>
+                  <span class="event-time">21:00 – 23:00</span>
+                </div>
+              </div>
+
+              <!-- ═══ TUE ═══ -->
+              <div class="day-column">
+                <div class="event event--point" style="--start: 420">
+                  <span class="event-label">Wake Up 🌅</span>
+                </div>
+                <div class="event event--block t-starbucks" style="--start: 540; --end: 630">
+                  <img class="event-logo" src="assets/starbucks-wordmark.png" alt="Starbucks" />
+                  <span class="event-time">9:00 – 10:30</span>
+                </div>
+                <div class="event event--point" style="--start: 660">
+                  <span class="event-label">G</span>
+                </div>
+                <div class="event event--block t-green" style="--start: 810; --end: 870">
+                  <span class="event-title">锻炼</span>
+                  <span class="event-time">13:30 – 14:30</span>
+                </div>
+                <div class="event event--block t-blue" style="--start: 870; --end: 960">
+                  <span class="event-title">科技园</span>
+                  <span class="event-time">14:30 – 16:00</span>
+                </div>
+                <div class="event event--point" style="--start: 1080">
+                  <span class="event-label">M</span>
+                </div>
+                <div class="event event--block t-red" style="--start: 1260; --end: 1380">
+                  <span class="event-title">Movie Time</span>
+                  <span class="event-time">21:00 – 23:00</span>
+                </div>
+              </div>
+
+              <!-- ═══ WED ═══ -->
+              <div class="day-column">
+                <div class="event event--point" style="--start: 420">
+                  <span class="event-label">Wake Up 🌅</span>
+                </div>
+                <div class="event event--block t-purple" style="--start: 1140; --end: 1230">
+                  <span class="event-title">课</span>
+                  <span class="event-time">19:00 – 20:30</span>
+                </div>
+                <div class="event event--block t-red" style="--start: 1260; --end: 1380">
+                  <span class="event-title">Movie Time</span>
+                  <span class="event-time">21:00 – 23:00</span>
+                </div>
+              </div>
+
+              <!-- ═══ THU ═══ -->
+              <div class="day-column">
+                <div class="event event--point" style="--start: 420">
+                  <span class="event-label">Wake Up 🌅</span>
+                </div>
+                <div class="event event--block t-starbucks" style="--start: 540; --end: 630">
+                  <img class="event-logo" src="assets/starbucks-wordmark.png" alt="Starbucks" />
+                  <span class="event-time">9:00 – 10:30</span>
+                </div>
+                <div class="event event--point" style="--start: 660">
+                  <span class="event-label">G</span>
+                </div>
+                <div class="event event--block t-green" style="--start: 810; --end: 870">
+                  <span class="event-title">锻炼</span>
+                  <span class="event-time">13:30 – 14:30</span>
+                </div>
+                <div class="event event--block t-blue" style="--start: 870; --end: 960">
+                  <span class="event-title">科技园</span>
+                  <span class="event-time">14:30 – 16:00</span>
+                </div>
+                <div class="event event--point" style="--start: 1080">
+                  <span class="event-label">M</span>
+                </div>
+                <div class="event event--block t-red" style="--start: 1260; --end: 1380">
+                  <span class="event-title">Movie Time</span>
+                  <span class="event-time">21:00 – 23:00</span>
+                </div>
+              </div>
+
+              <!-- ═══ FRI ═══ -->
+              <div class="day-column">
+                <div class="event event--point" style="--start: 420">
+                  <span class="event-label">Wake Up 🌅</span>
+                </div>
+                <div class="event event--block t-starbucks" style="--start: 540; --end: 780">
+                  <img class="event-logo" src="assets/starbucks-wordmark.png" alt="Starbucks" />
+                  <span class="event-time">9:00 – 13:00</span>
+                </div>
+                <div class="event event--block t-green" style="--start: 810; --end: 870">
+                  <span class="event-title">石岩</span>
+                  <span class="event-time">13:30 – 14:30</span>
+                </div>
+                <div class="event event--block t-purple" style="--start: 1080; --end: 1140">
+                  <span class="event-title">外轻</span>
+                  <span class="event-time">18:00 – 19:00</span>
+                </div>
+                <div class="event event--block t-red" style="--start: 1260; --end: 1380">
+                  <span class="event-title">Movie Time</span>
+                  <span class="event-time">21:00 – 23:00</span>
+                </div>
+              </div>
+
+              <!-- ═══ SAT ═══ -->
+              <div class="day-column">
+                <div class="event event--point" style="--start: 420">
+                  <span class="event-label">Wake Up 🌅</span>
+                </div>
+                <div class="event event--block t-purple" style="--start: 780; --end: 900">
+                  <span class="event-title">课</span>
+                  <span class="event-time">13:00 – 15:00</span>
+                </div>
+                <div class="event event--point" style="--start: 1080">
+                  <span class="event-label">K</span>
+                </div>
+                <div class="event event--block t-red" style="--start: 1260; --end: 1380">
+                  <span class="event-title">Movie Time</span>
+                  <span class="event-time">21:00 – 23:00</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
 </html>
