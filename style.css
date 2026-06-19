@@ -37,6 +37,8 @@
   --starbucks-green-dark: #005238;
   --sunrise-color: #e86a2a;
   --salad-green: #6aab55;
+  --japan-red: #bc002d;
+  --japan-red-bg: #fde8ea;
   --point-color: #1a73e8;
 
   --event-font-size: 0.6875rem;
@@ -275,6 +277,12 @@ html {
   background: var(--block-red);
   color: var(--block-red-text);
   border-color: #f5c6c4;
+}
+
+.event--block.t-japan {
+  background: var(--japan-red-bg);
+  color: var(--japan-red);
+  border-color: #f0b8c0;
 }
 
 .event--block.t-starbucks {
