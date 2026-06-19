@@ -38,7 +38,9 @@
   --sunrise-color: #e86a2a;
   --salad-green: #6aab55;
   --japan-red: #bc002d;
-  --japan-red-bg: #fde8ea;
+  --japan-red-dark: #9a0024;
+  --movie-gray-bg: #5c5c5c;
+  --movie-gray-text: #f0f0f0;
   --point-color: #1a73e8;
 
   --event-font-size: 0.6875rem;
@@ -273,6 +275,12 @@ html {
   border-color: #d7c4ee;
 }
 
+.event--block.t-movie {
+  background: var(--movie-gray-bg);
+  color: var(--movie-gray-text);
+  border-color: #3a3a3a;
+}
+
 .event--block.t-red {
   background: var(--block-red);
   color: var(--block-red-text);
@@ -280,9 +288,13 @@ html {
 }
 
 .event--block.t-japan {
-  background: var(--japan-red-bg);
-  color: var(--japan-red);
-  border-color: #f0b8c0;
+  background: var(--japan-red);
+  color: #fff;
+  border-color: var(--japan-red-dark);
+}
+
+.event--block.t-japan .event-time {
+  color: rgba(255, 255, 255, 0.88);
 }
 
 .event--block.t-starbucks {
