@@ -9,13 +9,14 @@
   --end-hour: 24;
   --hour-count: 17; /* end-hour − start-hour */
   --layout-offset: 5.5rem; /* page padding + day header */
-  --grid-top-padding: calc(1.35rem + 14px);
+  --grid-top-padding: calc(var(--event-label-height) + 8px);
+  --grid-bottom-padding: calc(var(--event-label-height) + 8px);
   --hour-height: clamp(
     22px,
-    (100dvh - var(--layout-offset) - var(--grid-top-padding)) / var(--hour-count),
+    (100dvh - var(--layout-offset) - var(--grid-top-padding) - var(--grid-bottom-padding)) / var(--hour-count),
     72px
   );
-  --time-gutter: 3.25rem;
+  --time-gutter: 3.5rem;
   --day-count: 7;
 
   --grid-line: #dadce0;
@@ -36,11 +37,15 @@
   --starbucks-green: #00704a;
   --starbucks-green-dark: #005238;
   --sunrise-color: #e86a2a;
+  --night-blue: #1a2744;
   --salad-green: #6aab55;
   --japan-red: #bc002d;
   --japan-red-dark: #9a0024;
   --earth-brown: #8b7355;
   --earth-brown-dark: #6b5744;
+  --workout-gray: #e0e0e0;
+  --workout-gray-text: #5f6368;
+  --workout-gray-border: #c8c8c8;
   --movie-gray-bg: #5c5c5c;
   --movie-gray-text: #f0f0f0;
   --point-color: #1a73e8;
@@ -176,8 +181,16 @@ html {
   display: inline-block;
 }
 
-.hour-label:first-child span {
-  top: -0.45em;
+.hour-label--end {
+  height: 0;
+  position: relative;
+}
+
+.hour-label--end span {
+  position: absolute;
+  right: 8px;
+  top: 0;
+  transform: translateY(-50%);
 }
 
 .day-column {
@@ -186,6 +199,7 @@ html {
   height: calc(
     var(--grid-top-padding)
     + (var(--end-hour) - var(--start-hour)) * var(--hour-height)
+    + var(--grid-bottom-padding)
   );
   background-image: repeating-linear-gradient(
     to bottom,
@@ -289,6 +303,12 @@ html {
   border-color: #f5c6c4;
 }
 
+.event--block.t-workout {
+  background: var(--workout-gray);
+  color: var(--workout-gray-text);
+  border-color: var(--workout-gray-border);
+}
+
 .event--block.t-earth {
   background: var(--earth-brown);
   color: #fff;
@@ -369,6 +389,23 @@ html {
   color: var(--salad-green);
 }
 
+.event--point.t-bed {
+  color: var(--night-blue);
+}
+
+.event--point.t-bed::before {
+  background: var(--night-blue);
+}
+
+.event--point.t-bed::after {
+  background: var(--night-blue);
+  box-shadow: 0 0 0 1px var(--night-blue);
+}
+
+.event--point.t-bed .event-label {
+  color: var(--night-blue);
+}
+
 .event--point {
   height: 0;
   z-index: 3;
@@ -416,8 +453,9 @@ html {
 @media (max-width: 640px) {
   :root {
     --layout-offset: 4rem;
-    --time-gutter: 2.75rem;
-    --grid-top-padding: calc(1.35rem + 10px);
+    --time-gutter: 3rem;
+    --grid-top-padding: calc(var(--event-label-height) + 6px);
+    --grid-bottom-padding: calc(var(--event-label-height) + 6px);
   }
 
   .page {
