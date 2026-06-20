@@ -181,6 +181,11 @@ html {
   display: inline-block;
 }
 
+.hour-label--meal span {
+  color: var(--salad-green);
+  font-weight: 600;
+}
+
 .hour-label--end {
   height: 0;
   position: relative;
@@ -257,7 +262,7 @@ html {
   text-overflow: ellipsis;
 }
 
-.event--block:not(.t-starbucks) .event-time {
+.event--block .event-time {
   display: block;
   font-size: var(--event-font-size);
   font-weight: 500;
@@ -333,11 +338,6 @@ html {
   background: var(--starbucks-green);
   color: #fff;
   border-color: var(--starbucks-green-dark);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 1px;
-  padding: 2px 5px 3px;
 }
 
 .event--block.t-starbucks .event-logo {
@@ -346,12 +346,11 @@ html {
   width: auto;
   max-width: 100%;
   object-fit: contain;
-  object-position: left center;
+  object-position: left top;
   filter: brightness(0) invert(1);
 }
 
 .event--block.t-starbucks .event-time {
-  font-size: 0.625rem;
   color: rgba(255, 255, 255, 0.88);
 }
 
@@ -370,23 +369,6 @@ html {
 
 .event--point.t-wakeup .event-label {
   color: var(--sunrise-color);
-}
-
-.event--point.t-salad {
-  color: var(--salad-green);
-}
-
-.event--point.t-salad::before {
-  background: var(--salad-green);
-}
-
-.event--point.t-salad::after {
-  background: var(--salad-green);
-  box-shadow: 0 0 0 1px var(--salad-green);
-}
-
-.event--point.t-salad .event-label {
-  color: var(--salad-green);
 }
 
 .event--point.t-bed {
@@ -462,7 +444,7 @@ html {
     padding: 0.375rem 0.5rem;
   }
 
-  .event--block:not(.t-starbucks) {
+  .event--block {
     padding: 1px 4px 2px;
   }
 }

@@ -16,7 +16,8 @@
       线段时间：class="event event--block"  + --start / --end
       时间点：  class="event event--point"  + --start
       并行：    --lane: 0 和 --lane: 1，--lanes: 2
-      颜色：    t-wakeup | t-salad | t-bed | t-blue | t-earth | t-starbucks | t-japan | t-movie
+      颜色：    t-wakeup | t-bed | t-blue | t-earth | t-starbucks | t-japan | t-movie
+      用餐时间：左侧 11:00、17:00 标签（沙拉绿 🥗）
       午夜：    0:00 → 1440（或次日 0 → 1440）
       ═══════════════════════════════════════════════════════════
     -->
@@ -42,13 +43,13 @@
                 <div class="hour-label"><span>08:00</span></div>
                 <div class="hour-label"><span>09:00</span></div>
                 <div class="hour-label"><span>10:00</span></div>
-                <div class="hour-label"><span>11:00</span></div>
+                <div class="hour-label hour-label--meal"><span>🥗 11:00</span></div>
                 <div class="hour-label"><span>12:00</span></div>
                 <div class="hour-label"><span>13:00</span></div>
                 <div class="hour-label"><span>14:00</span></div>
                 <div class="hour-label"><span>15:00</span></div>
                 <div class="hour-label"><span>16:00</span></div>
-                <div class="hour-label"><span>17:00</span></div>
+                <div class="hour-label hour-label--meal"><span>🥗 17:00</span></div>
                 <div class="hour-label"><span>18:00</span></div>
                 <div class="hour-label"><span>19:00</span></div>
                 <div class="hour-label"><span>20:00</span></div>
@@ -99,12 +100,9 @@
                   <img class="event-logo" src="assets/starbucks-wordmark.png" alt="Starbucks" />
                   <span class="event-time">9:00 – 10:30</span>
                 </div>
-                <div class="event event--point t-salad" style="--start: 660">
-                  <span class="event-label">Healthy Diet 🥗</span>
-                </div>
-                <div class="event event--block t-workout" style="--start: 720; --end: 810">
+                <div class="event event--block t-workout" style="--start: 1140; --end: 1230">
                   <span class="event-title">Working Out 💪</span>
-                  <span class="event-time">12:00 – 13:30</span>
+                  <span class="event-time">19:00 – 20:30</span>
                 </div>
                 <div class="event event--block t-blue" style="--start: 840; --end: 1260">
                   <span class="event-title">Office 💻</span>
@@ -146,12 +144,9 @@
                   <img class="event-logo" src="assets/starbucks-wordmark.png" alt="Starbucks" />
                   <span class="event-time">9:00 – 10:30</span>
                 </div>
-                <div class="event event--point t-salad" style="--start: 660">
-                  <span class="event-label">Healthy Diet 🥗</span>
-                </div>
-                <div class="event event--block t-workout" style="--start: 720; --end: 810">
+                <div class="event event--block t-workout" style="--start: 1140; --end: 1230">
                   <span class="event-title">Working Out 💪</span>
-                  <span class="event-time">12:00 – 13:30</span>
+                  <span class="event-time">19:00 – 20:30</span>
                 </div>
                 <div class="event event--block t-blue" style="--start: 840; --end: 1260">
                   <span class="event-title">Office 💻</span>
@@ -193,9 +188,9 @@
                 <div class="event event--point t-wakeup" style="--start: 420">
                   <span class="event-label">Wake Up 🌅</span>
                 </div>
-                <div class="event event--block t-workout" style="--start: 1080; --end: 1380">
+                <div class="event event--block t-workout" style="--start: 1140; --end: 1380">
                   <span class="event-title">Working Out 💪</span>
-                  <span class="event-time">18:00 – 23:00</span>
+                  <span class="event-time">19:00 – 23:00</span>
                 </div>
                 <div class="event event--block t-japan" style="--start: 780; --end: 900">
                   <span class="event-title">日本語授業🇯🇵</span>
