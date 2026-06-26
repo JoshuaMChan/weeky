@@ -51,6 +51,8 @@
   --workout-gray-border: #c8c8c8;
   --movie-gray-bg: #5c5c5c;
   --movie-gray-text: #f0f0f0;
+  --ps5-blue: #0070cc;
+  --ps5-blue-dark: #005aad;
   --point-color: #1a73e8;
 
   --event-font-size: 0.6875rem;
@@ -310,6 +312,16 @@ html {
   background: var(--movie-gray-bg);
   color: var(--movie-gray-text);
   border-color: #3a3a3a;
+}
+
+.event--block.t-ps5 {
+  background: var(--ps5-blue);
+  color: #fff;
+  border-color: var(--ps5-blue-dark);
+}
+
+.event--block.t-ps5 .event-time {
+  color: rgba(255, 255, 255, 0.88);
 }
 
 .event--block.t-red {
