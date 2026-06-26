@@ -497,7 +497,7 @@ html {
   text-overflow: ellipsis;
 }
 
-/* ── Mobile layout (CSS only, no JS) ── */
+/* ── Mobile layout ── */
 
 .mobile-day-input {
   position: absolute;
