@@ -32,6 +32,8 @@
   --block-yellow-text: #b06000;
   --block-purple: #e8dff7;
   --block-purple-text: #7627bb;
+  --block-pink: #fce4ec;
+  --block-pink-text: #c2185b;
   --block-red: #fce8e6;
   --block-red-text: #c5221f;
   --starbucks-green: #00704a;
@@ -316,6 +318,12 @@ html {
   border-color: #d7c4ee;
 }
 
+.event--block.t-pink {
+  background: var(--block-pink);
+  color: var(--block-pink-text);
+  border-color: #f5c2d4;
+}
+
 .event--block.t-movie {
   background: var(--movie-gray-bg);
   color: var(--movie-gray-text);
@@ -330,16 +338,16 @@ html {
 
 .event--block.t-gaming .event-logos {
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 6px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
 }
 
 .event--block.t-gaming .event-logo {
   display: block;
-  height: 0.85rem;
+  height: 0.8rem;
   width: auto;
-  max-width: 48%;
+  max-width: 100%;
   object-fit: contain;
   object-position: left center;
 }
