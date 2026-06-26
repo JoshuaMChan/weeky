@@ -334,6 +334,8 @@ html {
   background: var(--gaming-gray);
   color: var(--gaming-gray-text);
   border-color: var(--gaming-gray-border);
+  padding-top: 4px;
+  overflow: visible;
 }
 
 .event--block.t-gaming .event-logos {
@@ -341,15 +343,17 @@ html {
   flex-direction: row;
   align-items: center;
   gap: 8px;
+  min-height: 1.1rem;
 }
 
 .event--block.t-gaming .event-logo {
   display: block;
-  height: 1.1rem;
-  width: auto;
+  max-height: 1.1rem;
   max-width: 48%;
+  width: auto;
+  height: auto;
   object-fit: contain;
-  object-position: left center;
+  object-position: center;
 }
 
 .event--block.t-gaming .event-time {
