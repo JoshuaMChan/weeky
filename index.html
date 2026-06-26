@@ -19,7 +19,7 @@
       线段时间：class="event event--block"  + --start / --end
       时间点：  class="event event--point"  + --start
       并行：    --lane: 0 和 --lane: 1，--lanes: 2
-      颜色：    t-wakeup | t-bed | t-blue | t-earth | t-starbucks | t-japan | t-movie
+      颜色：    t-wakeup | t-bed | t-blue | t-earth | t-starbucks | t-japan | t-movie | t-yellow
       用餐时间：左侧 11:00、17:00 标签（沙拉绿 🥗）
       午夜：    0:00 → 1440（或次日 0 → 1440）
       ═══════════════════════════════════════════════════════════
@@ -144,6 +144,10 @@
                 <div class="event event--point t-wakeup" style="--start: 420">
                   <span class="event-label">Wake Up 🌅</span>
                 </div>
+                <div class="event event--block t-starbucks" style="--start: 510; --end: 630">
+                  <img class="event-logo" src="assets/starbucks-wordmark.png" alt="Starbucks" />
+                  <span class="event-time">8:30 – 10:30</span>
+                </div>
                 <div class="event event--block t-japan" style="--start: 1140; --end: 1260">
                   <span class="event-title">日本語授業🇯🇵</span>
                   <span class="event-time">19:00 – 21:00</span>
@@ -210,13 +214,21 @@
                 <div class="event event--point t-wakeup" style="--start: 420">
                   <span class="event-label">Wake Up 🌅</span>
                 </div>
-                <div class="event event--block t-workout" style="--start: 1140; --end: 1380">
-                  <span class="event-title">Work Out 💪</span>
-                  <span class="event-time">19:00 – 23:00</span>
+                <div class="event event--block t-starbucks" style="--start: 510; --end: 750">
+                  <img class="event-logo" src="assets/starbucks-wordmark.png" alt="Starbucks" />
+                  <span class="event-time">8:30 – 12:30</span>
                 </div>
                 <div class="event event--block t-japan" style="--start: 780; --end: 900">
                   <span class="event-title">日本語授業🇯🇵</span>
                   <span class="event-time">13:00 – 15:00</span>
+                </div>
+                <div class="event event--block t-yellow" style="--start: 930; --end: 1110">
+                  <span class="event-title">Drawing 🎨</span>
+                  <span class="event-time">15:30 – 18:30</span>
+                </div>
+                <div class="event event--block t-workout" style="--start: 1140; --end: 1380">
+                  <span class="event-title">Work Out 💪</span>
+                  <span class="event-time">19:00 – 23:00</span>
                 </div>
                 <div class="event event--point t-bed" style="--start: 1440">
                   <span class="event-label">Go to Bed 🌃</span>
