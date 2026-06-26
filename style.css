@@ -57,6 +57,9 @@
   --night-work-gray: #9a9a9a;
   --night-work-gray-text: #fff;
   --night-work-gray-border: #7a7a7a;
+  --book-cover: #8b3d3d;
+  --book-cover-text: #f5ead6;
+  --book-cover-border: #6d2f2f;
   --movie-gray-bg: #5c5c5c;
   --movie-gray-text: #f0f0f0;
   --point-color: #1a73e8;
@@ -291,13 +294,13 @@ html {
 }
 
 .event--block.t-blue {
-  background: var(--night-work-gray);
-  color: var(--night-work-gray-text);
-  border-color: var(--night-work-gray-border);
+  background: var(--gaming-gray);
+  color: var(--gaming-gray-text);
+  border-color: var(--gaming-gray-border);
 }
 
 .event--block.t-blue .event-time {
-  color: rgba(255, 255, 255, 0.88);
+  opacity: 0.85;
 }
 
 .event--block.t-green {
@@ -324,6 +327,16 @@ html {
   border-color: #f5c2d4;
 }
 
+.event--block.t-literature {
+  background: var(--book-cover);
+  color: var(--book-cover-text);
+  border-color: var(--book-cover-border);
+}
+
+.event--block.t-literature .event-time {
+  color: rgba(245, 234, 214, 0.88);
+}
+
 .event--block.t-movie {
   background: var(--movie-gray-bg);
   color: var(--movie-gray-text);
@@ -331,9 +344,9 @@ html {
 }
 
 .event--block.t-gaming {
-  background: var(--gaming-gray);
-  color: var(--gaming-gray-text);
-  border-color: var(--gaming-gray-border);
+  background: var(--night-work-gray);
+  color: var(--night-work-gray-text);
+  border-color: var(--night-work-gray-border);
   padding-top: 4px;
   overflow: visible;
 }
@@ -357,7 +370,7 @@ html {
 }
 
 .event--block.t-gaming .event-time {
-  opacity: 0.85;
+  color: rgba(255, 255, 255, 0.88);
 }
 
 .event--block.t-red {
