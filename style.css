@@ -338,16 +338,16 @@ html {
 
 .event--block.t-gaming .event-logos {
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 4px;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
 }
 
 .event--block.t-gaming .event-logo {
   display: block;
-  height: 0.8rem;
+  height: 1.1rem;
   width: auto;
-  max-width: 100%;
+  max-width: 48%;
   object-fit: contain;
   object-position: left center;
 }
