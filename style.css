@@ -37,22 +37,26 @@
   --starbucks-green: #00704a;
   --starbucks-green-dark: #005238;
   --sunrise-color: #e86a2a;
-  --block-sunrise: #fde8d8;
-  --block-sunrise-text: #c44d0a;
-  --block-sunrise-border: #f0a868;
+  --block-sunrise: #fff8d6;
+  --block-sunrise-text: #a67c00;
+  --block-sunrise-border: #f0e090;
   --night-blue: #1a2744;
   --salad-green: #6aab55;
   --japan-red: #bc002d;
   --japan-red-dark: #9a0024;
   --earth-brown: #8b7355;
   --earth-brown-dark: #6b5744;
-  --workout-gray: #e0e0e0;
-  --workout-gray-text: #5f6368;
-  --workout-gray-border: #c8c8c8;
+  --workout-blue: #cce8f4;
+  --workout-blue-text: #1565a8;
+  --workout-blue-border: #9ec9e8;
+  --gaming-gray: #e8e8e8;
+  --gaming-gray-text: #5f6368;
+  --gaming-gray-border: #d8d8d8;
+  --night-work-gray: #9a9a9a;
+  --night-work-gray-text: #fff;
+  --night-work-gray-border: #7a7a7a;
   --movie-gray-bg: #5c5c5c;
   --movie-gray-text: #f0f0f0;
-  --ps5-blue: #0070cc;
-  --ps5-blue-dark: #005aad;
   --point-color: #1a73e8;
 
   --event-font-size: 0.6875rem;
@@ -285,9 +289,13 @@ html {
 }
 
 .event--block.t-blue {
-  background: var(--block-blue);
-  color: var(--block-blue-text);
-  border-color: #aecbfa;
+  background: var(--night-work-gray);
+  color: var(--night-work-gray-text);
+  border-color: var(--night-work-gray-border);
+}
+
+.event--block.t-blue .event-time {
+  color: rgba(255, 255, 255, 0.88);
 }
 
 .event--block.t-green {
@@ -314,14 +322,30 @@ html {
   border-color: #3a3a3a;
 }
 
-.event--block.t-ps5 {
-  background: var(--ps5-blue);
-  color: #fff;
-  border-color: var(--ps5-blue-dark);
+.event--block.t-gaming {
+  background: var(--gaming-gray);
+  color: var(--gaming-gray-text);
+  border-color: var(--gaming-gray-border);
 }
 
-.event--block.t-ps5 .event-time {
-  color: rgba(255, 255, 255, 0.88);
+.event--block.t-gaming .event-logos {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 6px;
+}
+
+.event--block.t-gaming .event-logo {
+  display: block;
+  height: 0.85rem;
+  width: auto;
+  max-width: 48%;
+  object-fit: contain;
+  object-position: left center;
+}
+
+.event--block.t-gaming .event-time {
+  opacity: 0.85;
 }
 
 .event--block.t-red {
@@ -331,9 +355,9 @@ html {
 }
 
 .event--block.t-workout {
-  background: var(--workout-gray);
-  color: var(--workout-gray-text);
-  border-color: var(--workout-gray-border);
+  background: var(--workout-blue);
+  color: var(--workout-blue-text);
+  border-color: var(--workout-blue-border);
   z-index: 3;
 }
 

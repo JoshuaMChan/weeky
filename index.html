@@ -14,12 +14,12 @@
       ═══════════════════════════════════════════════════════════
       编辑指南
 
-      时间：距午夜分钟数（7:00 → 420，8:00 → 480，10:30 → 630）
+      时间：距午夜分钟数（7:00 → 420，7:30 → 450，9:30 → 570，10:00 → 600）
 
       线段时间：class="event event--block"  + --start / --end
       时间点：  class="event event--point"  + --start
       并行：    --lane: 0 和 --lane: 1，--lanes: 2
-      颜色：    t-wakeup | t-bed | t-blue | t-earth | t-starbucks | t-japan | t-movie | t-yellow | t-sunrise | t-ps5
+      颜色：    t-wakeup | t-bed | t-blue | t-earth | t-starbucks | t-japan | t-movie | t-purple | t-sunrise | t-gaming | t-workout
       用餐时间：左侧 11:00、17:00 标签（沙拉绿 🥗）
       午夜：    0:00 → 1440（或次日 0 → 1440）
       ═══════════════════════════════════════════════════════════
@@ -86,9 +86,12 @@
                 <div class="event event--point t-wakeup" style="--start: 420">
                   <span class="event-label">Wake Up 🌅</span>
                 </div>
-                <div class="event event--block t-ps5" style="--start: 480; --end: 1260">
-                  <span class="event-title">Gaming 🎮</span>
-                  <span class="event-time">8:00 – 21:00</span>
+                <div class="event event--block t-gaming" style="--start: 450; --end: 1260">
+                  <div class="event-logos">
+                    <img class="event-logo" src="assets/nintendo-switch2-logo.svg" alt="Nintendo Switch 2" />
+                    <img class="event-logo" src="assets/ps5-logo.svg" alt="PS5" />
+                  </div>
+                  <span class="event-time">7:30 – 21:00</span>
                 </div>
                 <div class="event event--block t-movie" style="--start: 1290; --end: 1410">
                   <span class="event-title">Movie 🎬</span>
@@ -104,13 +107,13 @@
                 <div class="event event--point t-wakeup" style="--start: 420">
                   <span class="event-label">Wake Up 🌅</span>
                 </div>
-                <div class="event event--block t-sunrise" style="--start: 480; --end: 600">
+                <div class="event event--block t-sunrise" style="--start: 450; --end: 570">
                   <span class="event-title">Treadmill Desking 💻</span>
-                  <span class="event-time">8:00 – 10:00</span>
+                  <span class="event-time">7:30 – 9:30</span>
                 </div>
-                <div class="event event--block t-starbucks" style="--start: 630; --end: 780">
+                <div class="event event--block t-starbucks" style="--start: 600; --end: 780">
                   <img class="event-logo" src="assets/starbucks-wordmark.png" alt="Starbucks" />
-                  <span class="event-time">10:30 – 13:00</span>
+                  <span class="event-time">10:00 – 13:00</span>
                 </div>
                 <div class="event event--block t-earth" style="--start: 810; --end: 1260">
                   <span class="event-title">Factory 🏭</span>
@@ -130,13 +133,13 @@
                 <div class="event event--point t-wakeup" style="--start: 420">
                   <span class="event-label">Wake Up 🌅</span>
                 </div>
-                <div class="event event--block t-sunrise" style="--start: 480; --end: 600">
+                <div class="event event--block t-sunrise" style="--start: 450; --end: 570">
                   <span class="event-title">Treadmill Desking 💻</span>
-                  <span class="event-time">8:00 – 10:00</span>
+                  <span class="event-time">7:30 – 9:30</span>
                 </div>
-                <div class="event event--block t-starbucks" style="--start: 630; --end: 690">
+                <div class="event event--block t-starbucks" style="--start: 600; --end: 690">
                   <img class="event-logo" src="assets/starbucks-wordmark.png" alt="Starbucks" />
-                  <span class="event-time">10:30 – 11:30</span>
+                  <span class="event-time">10:00 – 11:30</span>
                 </div>
                 <div class="event event--block t-workout" style="--start: 720; --end: 810">
                   <span class="event-title">Work Out 💪</span>
@@ -160,13 +163,13 @@
                 <div class="event event--point t-wakeup" style="--start: 420">
                   <span class="event-label">Wake Up 🌅</span>
                 </div>
-                <div class="event event--block t-sunrise" style="--start: 480; --end: 600">
+                <div class="event event--block t-sunrise" style="--start: 450; --end: 570">
                   <span class="event-title">Treadmill Desking 💻</span>
-                  <span class="event-time">8:00 – 10:00</span>
+                  <span class="event-time">7:30 – 9:30</span>
                 </div>
-                <div class="event event--block t-starbucks" style="--start: 630; --end: 750">
+                <div class="event event--block t-starbucks" style="--start: 600; --end: 750">
                   <img class="event-logo" src="assets/starbucks-wordmark.png" alt="Starbucks" />
-                  <span class="event-time">10:30 – 12:30</span>
+                  <span class="event-time">10:00 – 12:30</span>
                 </div>
                 <div class="event event--block t-japan" style="--start: 1140; --end: 1260">
                   <span class="event-title">日本語授業🇯🇵</span>
@@ -186,13 +189,13 @@
                 <div class="event event--point t-wakeup" style="--start: 420">
                   <span class="event-label">Wake Up 🌅</span>
                 </div>
-                <div class="event event--block t-sunrise" style="--start: 480; --end: 600">
+                <div class="event event--block t-sunrise" style="--start: 450; --end: 570">
                   <span class="event-title">Treadmill Desking 💻</span>
-                  <span class="event-time">8:00 – 10:00</span>
+                  <span class="event-time">7:30 – 9:30</span>
                 </div>
-                <div class="event event--block t-starbucks" style="--start: 630; --end: 690">
+                <div class="event event--block t-starbucks" style="--start: 600; --end: 690">
                   <img class="event-logo" src="assets/starbucks-wordmark.png" alt="Starbucks" />
-                  <span class="event-time">10:30 – 11:30</span>
+                  <span class="event-time">10:00 – 11:30</span>
                 </div>
                 <div class="event event--block t-workout" style="--start: 720; --end: 810">
                   <span class="event-title">Work Out 💪</span>
@@ -216,13 +219,13 @@
                 <div class="event event--point t-wakeup" style="--start: 420">
                   <span class="event-label">Wake Up 🌅</span>
                 </div>
-                <div class="event event--block t-sunrise" style="--start: 480; --end: 600">
+                <div class="event event--block t-sunrise" style="--start: 450; --end: 570">
                   <span class="event-title">Treadmill Desking 💻</span>
-                  <span class="event-time">8:00 – 10:00</span>
+                  <span class="event-time">7:30 – 9:30</span>
                 </div>
-                <div class="event event--block t-starbucks" style="--start: 630; --end: 780">
+                <div class="event event--block t-starbucks" style="--start: 600; --end: 780">
                   <img class="event-logo" src="assets/starbucks-wordmark.png" alt="Starbucks" />
-                  <span class="event-time">10:30 – 13:00</span>
+                  <span class="event-time">10:00 – 13:00</span>
                 </div>
                 <div class="event event--block t-earth" style="--start: 810; --end: 1260">
                   <span class="event-title">Factory 🏭</span>
@@ -242,19 +245,19 @@
                 <div class="event event--point t-wakeup" style="--start: 420">
                   <span class="event-label">Wake Up 🌅</span>
                 </div>
-                <div class="event event--block t-sunrise" style="--start: 480; --end: 600">
+                <div class="event event--block t-sunrise" style="--start: 450; --end: 570">
                   <span class="event-title">Treadmill Desking 💻</span>
-                  <span class="event-time">8:00 – 10:00</span>
+                  <span class="event-time">7:30 – 9:30</span>
                 </div>
-                <div class="event event--block t-starbucks" style="--start: 630; --end: 750">
+                <div class="event event--block t-starbucks" style="--start: 600; --end: 750">
                   <img class="event-logo" src="assets/starbucks-wordmark.png" alt="Starbucks" />
-                  <span class="event-time">10:30 – 12:30</span>
+                  <span class="event-time">10:00 – 12:30</span>
                 </div>
                 <div class="event event--block t-japan" style="--start: 780; --end: 900">
                   <span class="event-title">日本語授業🇯🇵</span>
                   <span class="event-time">13:00 – 15:00</span>
                 </div>
-                <div class="event event--block t-yellow" style="--start: 930; --end: 1110">
+                <div class="event event--block t-purple" style="--start: 930; --end: 1110">
                   <span class="event-title">Drawing 🎨</span>
                   <span class="event-time">15:30 – 18:30</span>
                 </div>
