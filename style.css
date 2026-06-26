@@ -37,6 +37,9 @@
   --starbucks-green: #00704a;
   --starbucks-green-dark: #005238;
   --sunrise-color: #e86a2a;
+  --block-sunrise: #fde8d8;
+  --block-sunrise-text: #c44d0a;
+  --block-sunrise-border: #f0a868;
   --night-blue: #1a2744;
   --salad-green: #6aab55;
   --japan-red: #bc002d;
@@ -340,6 +343,12 @@ html {
 
 .event--block.t-japan .event-time {
   color: rgba(255, 255, 255, 0.88);
+}
+
+.event--block.t-sunrise {
+  background: var(--block-sunrise);
+  color: var(--block-sunrise-text);
+  border-color: var(--block-sunrise-border);
 }
 
 .event--block.t-starbucks {
