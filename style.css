@@ -591,6 +591,7 @@ html {
 
   .calendar-scroll {
     overflow-x: hidden;
+    touch-action: pan-y;
   }
 
   .week-body {
