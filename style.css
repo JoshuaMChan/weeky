@@ -38,10 +38,10 @@
   --block-red-text: #c5221f;
   --starbucks-green: #00704a;
   --starbucks-green-dark: #005238;
-  --sunrise-color: #e86a2a;
-  --block-sunrise: #fff8d6;
-  --block-sunrise-text: #a67c00;
-  --block-sunrise-border: #f0e090;
+  --wakeup-yellow: #ffd400;
+  --block-sunrise: #fde8d8;
+  --block-sunrise-text: #c44d0a;
+  --block-sunrise-border: #f0a868;
   --night-blue: #1a2744;
   --salad-green: #6aab55;
   --japan-red: #bc002d;
@@ -433,20 +433,20 @@ html {
 }
 
 .event--point.t-wakeup {
-  color: var(--sunrise-color);
+  color: var(--wakeup-yellow);
 }
 
 .event--point.t-wakeup::before {
-  background: var(--sunrise-color);
+  background: var(--wakeup-yellow);
 }
 
 .event--point.t-wakeup::after {
-  background: var(--sunrise-color);
-  box-shadow: 0 0 0 1px var(--sunrise-color);
+  background: var(--wakeup-yellow);
+  box-shadow: 0 0 0 1px var(--wakeup-yellow);
 }
 
 .event--point.t-wakeup .event-label {
-  color: var(--sunrise-color);
+  color: var(--wakeup-yellow);
 }
 
 .event--point.t-bed {
